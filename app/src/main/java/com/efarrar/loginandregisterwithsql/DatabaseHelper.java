@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    /**onCreate() execute query to create table with COLs IT as PK, username, password
+    /**onCreate() execute query to create table in the db with COLs IT as PK, username, password
      *
      * @param db
      */
@@ -54,6 +54,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //insert into table and close the table
         db.insert("user_table", null, contentValues);
         db.close();
+
+        // if we made this return a boolean value add return true; at the end.
     }
 
     /**checkUser() <-- Checks if the user is in the table
